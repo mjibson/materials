@@ -1,13 +1,3 @@
-.materials(@light; @dark);
-
-.materials(@light; @dark) when (@default = light) {
-	.all(@light; @dark; dark);
-}
-
-.materials(@light; @dark) when (@default = dark) {
-	.all(@dark; @light; light);
-}
-
 .all(@primary; @secondary; @secondary-scheme) {
 	.root(@primary);
 	@media (prefers-color-scheme: @secondary-scheme) {

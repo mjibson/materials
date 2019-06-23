@@ -1,9 +1,9 @@
-SRC = $(wildcard default-*.less)
+SRC = $(wildcard *dark.less *light.less)
 LESSC = $(SRC:.less=.css)
 
 .PHONY: all
 
 all: $(LESSC)
 
-default-%.css: default-%.less colors.less materials.less
+%.css: %.less colors.less materials.less
 	lessc $< $@
