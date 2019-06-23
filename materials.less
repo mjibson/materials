@@ -35,27 +35,27 @@
 	--on-surface: @colors[on-surface];
 	--on-error: @colors[on-error];
 
-	.dp(@colors[on-surface]);
-	.emph(@colors[on-surface]);
+	.dp(@colors[surface]; @colors[on-surface]);
+	.emph(@colors[surface]; @colors[on-surface]);
 }
 
-.dp(@color) {
-	--dp00: rgba(@color, 0);
-	--dp01: rgba(@color, 0.05);
-	--dp02: rgba(@color, 0.07);
-	--dp03: rgba(@color, 0.08);
-	--dp04: rgba(@color, 0.09);
-	--dp06: rgba(@color, 0.11);
-	--dp08: rgba(@color, 0.12);
-	--dp12: rgba(@color, 0.14);
-	--dp16: rgba(@color, 0.15);
-	--dp24: rgba(@color, 0.16);
+.dp(@color; @background) {
+	--dp00: mix(@background, @color, 0);
+	--dp01: mix(@background, @color, 5);
+	--dp02: mix(@background, @color, 7);
+	--dp03: mix(@background, @color, 8);
+	--dp04: mix(@background, @color, 9);
+	--dp06: mix(@background, @color, 11);
+	--dp08: mix(@background, @color, 12);
+	--dp12: mix(@background, @color, 14);
+	--dp16: mix(@background, @color, 15);
+	--dp24: mix(@background, @color, 16);
 }
 
-.emph(@color) {
-	--emph-high: rgba(@color, 0.87);
-	--emph-medium: rgba(@color, 0.6);
-	--disabled: rgba(@color, 0.38);
+.emph(@color; @background) {
+	--emph-high: mix(@background, @color, 87);
+	--emph-medium: mix(@background, @color, 60);
+	--disabled: mix(@background, @color, 38);
 }
 
 body {
