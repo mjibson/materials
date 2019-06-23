@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+		/>
+		<title>materials - CSS colors for material ui</title>
+		<link rel="stylesheet" href="/{{ block "css" . }}{{ end }}" />
+		<style>
+			body {
+				max-width: 38rem;
+				padding-left: 0.5rem;
+				padding-right: 0.5rem;
+				margin: 0;
+				margin-left: auto;
+				margin-right: auto;
+				font-size: 20px;
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+					Arial, sans-serif;
+			}
+			a {
+				color: var(--primary);
+			}
+			body > div {
+				background: var(--dp01);
+				padding: 0.5rem;
+			}
+			body > div + div {
+				margin-top: 0.5rem;
+			}
+			h1,
+			h1 a,
+			h2,
+			h4 {
+				color: var(--emph-high);
+				background: var(--dp08);
+				text-decoration: none;
+				padding: .2rem
+			}
+			div.variables svg {
+				margin-left: 1rem;
+				border: 0.2rem solid var(--background);
+				height: 2rem;
+				width: 2rem;
+			}
+			pre {
+				padding: .5rem;
+				background: var(--dp04);
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1><a href="/">materials</a></h1>
+			<h3>
+				Simple CSS with <a href="/light">light</a> and <a href="/dark">dark</a> preference schemes.
+			</h3>
+			<p>
+				Materials is a set of CSS color variables that follow
+				<a href="https://material.io/">Material Design</a>. It supports the
+				<a
+					href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme"
+					><code>prefers-color-scheme</code> media query</a
+				>
+				for
+				<a href="https://caniuse.com/#search=prefers-color-scheme"
+					>supported browsers</a
+				>
+				(this allows your users to indicate if they prefer a light or dark
+				mode).
+			</p>
+			<p>
+				It is a single file that can be added to your existing CSS that will set
+				CSS variables that can be used to color your website. There are various configurations:
+			</p>
+			<p><a href="default-light.css">default-light.css</a> defaults to light</p>
+			<p><a href="default-dark.css">default-dark.css</a> defaults to dark</p>
+			<p><a href="light.css">light.css</a> only has light</p>
+			<p><a href="dark.css">dark.css</a> only has dark</p>
+		</div>
+		<div class="variables">
+			<h2 >variables</h2>
+			<p>CSS variables can be used while styling. For example:
+				<pre>.class {
+  color: var(--primary);
+}</pre>
+			</p>
+			<p>
+				<svg style="background: var(--background)"></svg>
+				<code>--background</code>
+			</p>
+			<p>
+				<svg style="background: var(--surface)"></svg>
+				<code>--surface</code>
+			</p>
+			<p>
+				<svg style="background: var(--primary)"></svg>
+				<code>--primary</code>
+			</p>
+			<p>
+				<svg style="background: var(--variant)"></svg>
+				<code>--variant</code>
+			</p>
+			<p>
+				<svg style="background: var(--secondary)"></svg>
+				<code>--secondary</code>
+			</p>
+			<p>
+				<svg style="background: var(--secondary-variant)"></svg>
+				<code>--secondary-variant</code>
+			</p>
+			<p>
+				<svg style="background: var(--error)"></svg>
+				<code>--error</code>
+			</p>
+			<h4>on</h4>
+			<p>
+				<svg style="background: var(--on-background)"></svg>
+				<code>--on-background</code>
+			</p>
+			<p>
+				<svg style="background: var(--on-surface)"></svg>
+				<code>--on-surface</code>
+			</p>
+			<p>
+				<svg style="background: var(--on-primary)"></svg>
+				<code>--on-primary</code>
+			</p>
+			<p>
+				<svg style="background: var(--on-secondary)"></svg>
+				<code>--on-secondary</code>
+			</p>
+			<p>
+				<svg style="background: var(--on-error)"></svg>
+				<code>--on-error</code>
+			</p>
+			<h4>text</h4>
+			<p>
+				<svg style="background: var(--emph-high)"></svg>
+				<code>--emph-high</code>
+			</p>
+			<p>
+				<svg style="background: var(--emph-medium)"></svg>
+				<code>--emph-medium</code>
+			</p>
+			<p>
+				<svg style="background: var(--disabled)"></svg>
+				<code>--disabled</code>
+			</p>
+			<h4>elevations</h4>
+			<p>
+				<svg style="background: var(--dp00)"></svg>
+				<code>--dp00</code>
+			</p>
+			<p>
+				<svg style="background: var(--dp01)"></svg>
+				<code>--dp01</code>
+			</p>
+			<p>
+				<svg style="background: var(--dp02)"></svg>
+				<code>--dp02</code>
+			</p>
+			<p>
+				<svg style="background: var(--dp03)"></svg>
+				<code>--dp03</code>
+			</p>
+			<p>
+				<svg style="background: var(--dp04)"></svg>
+				<code>--dp04</code>
+			</p>
+			<p>
+				<svg style="background: var(--dp06)"></svg>
+				<code>--dp06</code>
+			</p>
+			<p>
+				<svg style="background: var(--dp08)"></svg>
+				<code>--dp08</code>
+			</p>
+			<p>
+				<svg style="background: var(--dp12)"></svg>
+				<code>--dp12</code>
+			</p>
+			<p>
+				<svg style="background: var(--dp16)"></svg>
+				<code>--dp16</code>
+			</p>
+			<p>
+				<svg style="background: var(--dp24)"></svg>
+				<code>--dp24</code>
+			</p>
+		</div>
+
+		<a
+			href="https://github.com/mjibson/materials"
+			class="github-corner"
+			aria-label="View source on GitHub"
+			><svg
+				width="80"
+				height="80"
+				viewBox="0 0 250 250"
+				style="fill:var(--secondary); color:var(--background); position: absolute; top: 0; border: 0; right: 0;"
+				aria-hidden="true"
+			>
+				<path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+				<path
+					d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+					fill="currentColor"
+					style="transform-origin: 130px 106px;"
+					class="octo-arm"
+				></path>
+				<path
+					d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+					fill="currentColor"
+					class="octo-body"
+				></path></svg></a
+		><style>
+			.github-corner:hover .octo-arm {
+				animation: octocat-wave 560ms ease-in-out;
+			}
+			@keyframes octocat-wave {
+				0%,
+				100% {
+					transform: rotate(0);
+				}
+				20%,
+				60% {
+					transform: rotate(-25deg);
+				}
+				40%,
+				80% {
+					transform: rotate(10deg);
+				}
+			}
+			@media (max-width: 500px) {
+				.github-corner:hover .octo-arm {
+					animation: none;
+				}
+				.github-corner .octo-arm {
+					animation: octocat-wave 560ms ease-in-out;
+				}
+			}
+		</style>
+	</body>
+</html>
